@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.RRSS {
+    height: 25px;
+    width: 25px;
+}
