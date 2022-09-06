@@ -7,6 +7,7 @@ import { FormularioRegistroComponent } from './component/formulario-registro/for
 import { HeaderComponent } from './component/header/header.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { LibrosComponent } from './pages/libros/libros.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
     FormularioRegistroComponent,
     RegistroComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LibrosComponent
 
   ],
   imports: [
