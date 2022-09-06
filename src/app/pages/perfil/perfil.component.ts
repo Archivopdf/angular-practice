@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/models/usuario';
+import { Usuario } from 'src/app/models/Usuario';
 
 @Component({
   selector: 'app-perfil',
@@ -8,11 +8,17 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class PerfilComponent implements OnInit {
 
-  public usuarioPerfil: Usuario;
+  public UsuarioPerfil: Usuario;
+  public myclass: string;
+  public isHidden: boolean;
+
 
 
   constructor() {
-    this.usuarioPerfil = new Usuario('Pedro', 'Perez', 'pedro77@correo.es', '../../assets(img/foto.jpg', 'contraseña', 0);
+    this.UsuarioPerfil = new Usuario('Pedro', 'Perez', 'pedro77@correo.es', '../../assets(img/foto.jpg', 'contraseña', 0);
+    this.myclass = "clase";
+    this.isHidden = true;
+
   }
 
   ngOnInit(): void {
@@ -20,11 +26,18 @@ export class PerfilComponent implements OnInit {
 
   change(nombre: string, apellido: string, correo: string, url: string, password: string) {
     let modify: boolean = false;
-    if (nombre) { this.usuarioPerfil.nombre = nombre; modify = true };
-    if (apellido) { this.usuarioPerfil.apellido = apellido; modify = true };
-    if (correo) { this.usuarioPerfil.correo = correo; modify = true };
-    if (url) { this.usuarioPerfil.url = url; modify = true };
-    if (password) { this.usuarioPerfil.password = password; modify = true };
+    if (nombre) { this.UsuarioPerfil.nombre = nombre; modify = true };
+    if (apellido) { this.UsuarioPerfil.apellido = apellido; modify = true };
+    if (correo) { this.UsuarioPerfil.correo = correo; modify = true };
+    if (url) { this.UsuarioPerfil.url = url; modify = true };
+    if (password) { this.UsuarioPerfil.password = password; modify = true };
   }
 
+  oculto() {
+    if (this.isHidden == true) {
+      this.isHidden = false
+    } else if (this.isHidden == false) {
+      this.isHidden = true
+    }
+  }
 }

@@ -2,23 +2,28 @@
     <div class="datos">
         <img class="img" src="https://img2.rtve.es/i/?w=1600&i=1650645866401.jpg" alt="Error al cargar la imagen">
         <h2>
-            <strong class=""></strong>{{usuarioPerfil.nombre + ' ' + usuarioPerfil.apelllido}}
+            <strong class="UsuarioPerfil"></strong>{{UsuarioPerfil.nombre + ' ' + UsuarioPerfil.apellido}}
         </h2>>
 
         <div>Nombre:</div>
-        <input type="text" class="" [value]="usuarioPerfil.nombre" readonly>
+        <input type="text" class="UsuarioPerfil" [value]="UsuarioPerfil.nombre" readonly>
         <div>Apellido:</div>
-        <input type="text" class="" [value]="usuarioPerfil.apellido" readonly>
+        <input type="text" class="UsuarioPerfil" [value]="UsuarioPerfil.apellido" readonly>
         <div>Correo:</div>
-        <input type="text" class="" [value]="usuarioPerfil.correo" readonly>
+        <input type="text" class="UsuarioPerfil" [value]="UsuarioPerfil.correo" readonly>
+
     </div>
-    <div class="modifier">
+
+    <button click="oculto()"> Editar perfil</button>
+
+    <form [hidden]="isHidden" class="modifier">
         <h1>Editar datos</h1>
         <label> Nombre <input type="text" id="Name" name="Name" placeholder="Esrcibe tu nombre"></label>
         <label> Apellido <input type="text" id="surname" name="surname" placeholder="Escribe tu apellido"></label>
         <label> Email <input type="text" id="email" name="email" placeholder="Escribe tu email"></label>
         <label> Url <input type="text" id="url" name="url" placeholder="Escribe tu Url"></label>
         <button type="reset"
-            (click)="change(nombre.value, apellido.value, correo.value, url.value, password.value)">Modificar</button>
-    </div>
+            (click)="change(UsuarioPerfil.nombre.value, UsuarioPerfil.apellido.value, UsuarioPerfil.correo.value, UsuarioPerfil.url.value, UsuarioPerfil.password.value)">Modificar</button>
+
+    </form>
 </body>
