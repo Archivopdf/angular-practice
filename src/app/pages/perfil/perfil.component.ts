@@ -9,10 +9,12 @@ import { Usuario } from 'src/app/models/usuario';
 export class PerfilComponent implements OnInit {
 
   public usuarioPerfil: Usuario;
+  public isHidden: boolean;
 
 
   constructor() {
     this.usuarioPerfil = new Usuario('Pedro', 'Perez', 'pedro77@correo.es', '../../assets(img/foto.jpg', 'contraseña', 0);
+    this.isHidden = true;
   }
 
   ngOnInit(): void {
@@ -27,4 +29,11 @@ export class PerfilComponent implements OnInit {
     if (password) { this.usuarioPerfil.password = password; modify = true };
   }
 
+  oculto() {
+    if (this.isHidden == true) {
+      this.isHidden = false
+    } else if (this.isHidden == false) {
+      this.isHidden = true
+    }
+  }
 }

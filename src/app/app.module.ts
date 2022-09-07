@@ -8,6 +8,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { LibrosComponent } from './pages/libros/libros.component';
+import { Usuario } from './models/usuario';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LibrosComponent } from './pages/libros/libros.component';
     RegistroComponent,
     HeaderComponent,
     FooterComponent,
-    LibrosComponent
+    LibrosComponent,
+
 
   ],
   imports: [

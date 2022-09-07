@@ -8,7 +8,7 @@ export class libro {
     public precio: number;
     public photo: string;
 
-    constructor(Id_libro: number = 0, Id_usuario: number = 0, titulo: string, tipoLibro: string, autor: string, precio: number, photo: string) {
+    constructor(titulo: string, tipoLibro: string, autor: string, precio: number, photo: string, Id_libro: number = 0, Id_usuario: number = 0) {
 
         this.Id_libro = Id_libro;
         this.Id_usuario = Id_usuario;

@@ -1,1 +1,37 @@
-<p>libros works!</p>
+<body>
+    <div class="empty" *ngIF="libros.length == 0; else cards" ;>
+        <h1>No hay libros guardados</h1>
+    </div>
+    <div class="controlador">
+        <div class="cards" *ngFor="let libro of libros">
+            <div class="card">
+                <div class="imagen">
+                    <img src="" alt="error">
+                </div>
+                <div class="container">
+                    <h4><b>{{libro.titulo}}</b></h4>
+                    <p>{{libro.autor}}</p>
+                    <p>{{libro.tipoLibro}}</p>
+                    <p>{{libro.precio}}</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="add">
+            <button> Añadir un libro</button>
+        </div>
+        <form class="modifier">
+            <h1>Añadir los datos al libro</h1>
+            <input titulo type="text" id="titulo" name="titulo" placeholder="Esrcibe el título">
+            <input autor type="text" id="autor" name="autor" placeholder="Escribe el autor">
+            <input tipoLibro type="text" id="tipoLibro" name="tipoLibro" placeholder="Escribe el tipo de libro">
+            <input precio type="number" id="precio" name="precio" placeholder="Escribe el precio del libro">
+            <input photo type="text" id="photo" name="photo" placeholder="Escribe la URL de la imagen del libro">
+            <!-- <button (click)="addBook(lirbos.titulo.value, libros.autor.value, libros.tipoLibro.value,
+             libros.precio.value, libros.photo.value)">
+            Añadir el libro
+            </button> -->
+
+        </form>
+    </div>
+</body>
