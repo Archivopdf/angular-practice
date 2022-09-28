@@ -9,6 +9,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { LibrosComponent } from './pages/libros/libros.component';
 import { Usuario } from './models/usuario';
+import { IdLibroPipe } from './pipes/id-libro.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { Usuario } from './models/usuario';
     HeaderComponent,
     FooterComponent,
     LibrosComponent,
+    IdLibroPipe,
 
 
   ],
